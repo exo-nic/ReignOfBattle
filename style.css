@@ -1,0 +1,101 @@
+/* ===== CUSTOM PIXEL FONTS ===== */
+@font-face {
+    font-family: "Press Start 2P";
+    src: url("assets/fonts/PressStart2P-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Silkscreen";
+    src: url("assets/fonts/Silkscreen-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Silkscreen";
+    src: url("assets/fonts/Silkscreen-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ===== RESET ===== */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: radial-gradient(ellipse at 50% 20%, #101a2e 0%, #070910 55%, #05060a 100%);
+  font-family: "Silkscreen", "Segoe UI", Arial, sans-serif;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#stage {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  box-sizing: border-box;
+}
+
+canvas {
+  max-width: 100%;
+  max-height: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  box-shadow:
+    0 0 0 1px rgba(120, 180, 255, 0.12),
+    0 18px 60px rgba(0, 0, 0, 0.8),
+    0 0 90px rgba(80, 140, 255, 0.10);
+  display: block;
+  touch-action: none;
+  image-rendering: pixelated;
+  background: #0a0d16;
+}
+
+/* ===== ROTATE WARNING ===== */
+#rotate-warning {
+    position: fixed;
+    inset: 0;
+    background: #0a0d16;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    color: #ffc441;
+    font-family: "Press Start 2P", sans-serif;
+    text-align: center;
+}
+
+#rotate-warning .rotate-icon {
+    font-size: 80px;
+    margin-bottom: 30px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+#rotate-warning .rotate-text {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+#rotate-warning .rotate-sub {
+    font-size: 14px;
+    color: #9fb0c8;
+    font-family: "Silkscreen", sans-serif;
+}

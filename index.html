@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>Reign of Battle — Artillery Duel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="stage">
+    <canvas id="game"></canvas>
+  </div>
+
+  <div id="rotate-warning" style="display:none;">
+      <div class="rotate-icon">🔄</div>
+      <div class="rotate-text">ROTATE DEVICE</div>
+      <div class="rotate-sub">Landscape mode required</div>
+  </div>
+
+  <!-- ===== GAME SCRIPTS (ORDER MATTERS) ===== -->
+  <script src="js/01_config.js"></script>
+  <script src="js/02_sprites.js"></script>
+  <script src="js/03_terrain.js"></script>
+  <script src="js/04_tanks.js"></script>
+  <script src="js/05_physics.js"></script>
+  <script src="js/06_ai.js"></script>
+  <script src="js/07_icons.js"></script>
+  <script src="js/08_hud.js"></script>
+  <script src="js/09_menu.js"></script>
+  <script src="js/10_garage.js"></script>
+  <script src="js/13_joystick.js"></script>  <!-- NEW -->
+  <script src="js/11_input.js"></script>
+  <script src="js/14_audio.js"></script>   <!-- NEW -->
+  <script src="js/12_loop.js"></script>
+</body>
+</html>
